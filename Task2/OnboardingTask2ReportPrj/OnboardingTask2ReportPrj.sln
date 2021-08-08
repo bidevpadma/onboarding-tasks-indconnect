@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1585
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "OnboardingTask2ReportPrj", "OnboardingTask2ReportPrj\OnboardingTask2ReportPrj.rptproj", "{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.Debug|Default.ActiveCfg = Debug
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.Debug|Default.Build.0 = Debug
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.Debug|Default.Deploy.0 = Debug
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.DebugLocal|Default.Build.0 = DebugLocal
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.Release|Default.ActiveCfg = Release
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.Release|Default.Build.0 = Release
+		{C0B5E692-1E4D-4282-9F3A-230BAEDE47BB}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56640339-A89E-4474-A885-7347FBBC35C9}
+	EndGlobalSection
+EndGlobal

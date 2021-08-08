@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>KeysDataSource</DataSourceReference>
+      <CommandText>SELECT op.PropertyId, op.OwnerId, { fn CONCAT(per.FirstName, ' ', per.LastName) } AS 'OwnerName', { fn CONCAT(addr.Number, ' ', addr.Street, ', ', addr.City, ', ',
+                      (SELECT Name
+                       FROM      Country
+                       WHERE   (Id = addr.CountryId)), ' ', addr.PostCode) } AS 'PropertyAddress', { fn CONCAT((CASE WHEN prop.Bedroom IS NULL THEN 0 ELSE prop.Bedroom END), ' Bedrooms, ', (CASE WHEN prop.Bathroom IS NULL 
+                  THEN 0 ELSE prop.Bathroom END), ' Bathrooms') } AS 'Property Details', { fn CONCAT('$', prp.Amount, ' per ', 
+                  (CASE WHEN prp.FrequencyType = 1 THEN 'week' WHEN prp.FrequencyType = 2 THEN 'fortnight' WHEN prp.FrequencyType = 3 THEN 'month' ELSE 'Unknown' END)) } AS 'RentalPayments', pex.Amount AS 'ExpenseAmount', 
+                  FORMAT(pex.Date, 'dd MMM yyyy', 'en-GB') AS 'ExpenseDate', pex.Description AS 'ExpenseDescription'
+FROM     OwnerProperty AS op INNER JOIN
+                  Person AS per ON per.Id = op.OwnerId INNER JOIN
+                  Property AS prop ON prop.Id = op.PropertyId INNER JOIN
+                  Address AS addr ON addr.AddressId = prop.AddressId INNER JOIN
+                  PropertyRentalPayment AS prp ON prp.PropertyId = op.PropertyId INNER JOIN
+                  PropertyExpense AS pex ON op.PropertyId = pex.PropertyId</CommandText>
+    </Query>
+  </DataSet>
+</SharedDataSet>
