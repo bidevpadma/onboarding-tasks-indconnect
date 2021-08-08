@@ -799,7 +799,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Expense Report for </Value>
+                                      <Value>Expense Report of </Value>
                                       <Style>
                                         <FontSize>14pt</FontSize>
                                       </Style>
@@ -837,7 +837,6 @@
                           <KeepTogether>true</KeepTogether>
                           <Style />
                         </Rectangle>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
